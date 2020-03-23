@@ -25,6 +25,6 @@ var checksum = secHash.substr(0,8);
 
 var address = version + CryptoJS.util.bytesToHex(hash160) + checksum;
 
-var finalAdress = bs58.encode(CryptoJS.util.hexToBytes(address));
+var finalAddress = bs58.encode(CryptoJS.util.hexToBytes(address));
 
-console.log(finalAdress);
+module.exports=finalAddress;
