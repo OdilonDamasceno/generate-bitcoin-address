@@ -4,9 +4,11 @@
   "description": "Custom bitcoin address generator",
   "main": "cria_chave_privada.js",
   "dependencies": {
+    "bs58": "^4.0.1"
+  },
+  "devDependencies": {
     "cryptojs": "^2.5.3"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
