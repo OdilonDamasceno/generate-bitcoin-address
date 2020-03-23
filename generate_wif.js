@@ -21,4 +21,4 @@ var WIF = privateKeyVersion+checksum;
 // On the bitcoin network is used the base 58 for represent your address 
 var finalWIF = bs58.encode(CryptoJS.util.hexToBytes(WIF));
 
-console.log(finalWIF);
+module.exports = finalWIF;
