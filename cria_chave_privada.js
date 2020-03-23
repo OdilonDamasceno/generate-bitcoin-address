@@ -1,7 +1,8 @@
 var CryptoJs = require('cryptojs').Crypto;
 
-var chavePrivada = CryptoJs.util.randomBytes(32);
+var privateKey = CryptoJs.util.randomBytes(32);
 
-var chavePrivadaHex = CryptoJs.util.bytesToHex(chavePrivada).toUpperCase();
+var privateKeyHex = CryptoJs.util.bytesToHex(privateKey).toUpperCase();
 
-console.log(chavePrivadaHex);
+console.log(privateKeyHex);
+
