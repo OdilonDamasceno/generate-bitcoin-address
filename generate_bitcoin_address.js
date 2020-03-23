@@ -8,17 +8,13 @@ var publicKey = require('./generate_publicKey.js');
 var version = '00';
 
 var publicKeyBytes = CryptoJS.util.hexToBytes(publicKey);
-console.log(publicKeyBytes)
 
 var publicKeySHA256 = CryptoJS.SHA256(publicKeyBytes);
-console.log(publicKeySHA256)
 
 var hash160 = bitcoin.crypto.ripemd160(Buffer.alloc(20,CryptoJS.util.hexToBytes(publicKeySHA256)));
-console.log(hash160);
 
 var hashBytes = Array.prototype.slice.call(hash160, 0);
 hashBytes.unshift(CryptoJS.util.hexToBytes(version));
-console.log(hashBytes);
 
 var firstHash = CryptoJS.SHA256(hashBytes);
 
