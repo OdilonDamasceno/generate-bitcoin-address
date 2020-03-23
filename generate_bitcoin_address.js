@@ -11,9 +11,10 @@ var publicKeyBytes = CryptoJS.util.hexToBytes(publicKey);
 
 var publicKeySHA256 = CryptoJS.SHA256(publicKeyBytes);
 
-var hash160 = bitcoin.crypto.ripemd160(Buffer.alloc(20,CryptoJS.util.hexToBytes(publicKeySHA256)));
+var hash160 = bitcoin.crypto.ripemd160(new Buffer.from(CryptoJS.util.hexToBytes(publicKeySHA256)));
 
 var hashBytes = Array.prototype.slice.call(hash160, 0);
+
 hashBytes.unshift(CryptoJS.util.hexToBytes(version));
 
 var firstHash = CryptoJS.SHA256(hashBytes);
