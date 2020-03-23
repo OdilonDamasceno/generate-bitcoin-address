@@ -6,5 +6,5 @@ Custom Bitcoin address generator
 * npm install
 * npm start
 ### Or
-* node generate_bitcoin_address.js
+* node index.js
 
