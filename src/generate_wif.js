@@ -18,7 +18,7 @@ var checksum = secondHash.substr(0,8);
 
 var WIF = privateKeyVersion+checksum;
 
-// On the bitcoin network is used the base 58 for represent your address 
+// On the bitcoin network is used the base  58 for represent your address 
 var finalWIF = bs58.encode(CryptoJS.util.hexToBytes(WIF));
 
 module.exports = finalWIF;

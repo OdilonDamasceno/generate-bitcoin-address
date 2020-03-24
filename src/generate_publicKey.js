@@ -6,8 +6,15 @@ var secp256k1 = require('secp256k1');
 // The public key is generated stating from encryptation type
 // eliptics curves. More precisely a secp256k1 curve
 
-var publicKey = secp256k1.publicKeyCreate(Uint8Array.from(privateKey),false);
+var publicKey = secp256k1.publicKeyCreate(Uint8Array.from(privateKey), false);
+
+var publicKeyCompressed = secp256k1.publicKeyConvert(publicKey, true);
 
 var publicKeyHex = CryptoJS.util.bytesToHex(publicKey);
 
-module.exports = publicKeyHex;
+var publicKeyCompressedHex = CryptoJS.util.bytesToHex(publicKeyCompressed);
+
+module.exports = {
+    publicKeyHex,
+    publicKeyCompressedHex
+};
