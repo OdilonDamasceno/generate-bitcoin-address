@@ -8,7 +8,7 @@ var version = '80';
 
 // the next 32 bytes is your privateKey
 
-var privateKeyVersion = version + privateKey;
+var privateKeyVersion = version + CryptoJS.util.bytesToHex(privateKey);
 // and the checksum is the validator
 // And how the checksum is created?
 // basically is the first 4 bytes of a Hash of hash of last 33 bytes
