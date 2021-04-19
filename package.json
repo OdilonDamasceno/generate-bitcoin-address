@@ -2,7 +2,7 @@
   "name": "generate-bitcoin-address",
   "version": "1.0.0",
   "description": "Custom bitcoin address generator",
-  "main": "./src/generate_bitcoin_address.js",
+  "main": "index.js",
   "dependencies": {
     "acorn": "^7.1.1",
     "bitcoinjs-lib": "^5.1.7",
